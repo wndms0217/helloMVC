@@ -29,10 +29,12 @@ public class Home extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		//index.jsp에서 저장한 action값 받기. (login 또는 register)
 		String action = request.getParameter("action");
 		
 		String page = null;
 		
+		//사용자가 선택한 옵션에 따라 페이지 지정
 		if(action.equals("login"))
 			page="/view/loginForm.jsp";
 		else if(action.equals("register"))
@@ -40,6 +42,7 @@ public class Home extends HttpServlet {
 		else
 			page="/view/error.jsp";
 		
+		//지정된 페이지로 forward
 		RequestDispatcher dispatcher = request.getRequestDispatcher(page);
 				dispatcher.forward(request, response);
 	}

@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Login Success Page</title>
 </head>
 <body>
-	<%--     request에 저장되어 있는 bean객체 조회하여 출력          --%>
+	<%--     request에 저장되어 있는 bean객체 조회 하여 customer의 이름 출력          --%>
 	<h1>${customer.name} logged in successfully.</h1>
 	<p>
 		<a href="/helloMVC/index.jsp">go to home page</a>

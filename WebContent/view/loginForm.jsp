@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Login Page</title>
 </head>
 <style>
 div.ex {
@@ -19,6 +19,7 @@ div.ex {
 <body>
 	<h1>Login Form</h1>
 	<div class="ex">
+		<%-- doLogin page로 post방식으로 전송(아이디와 패스워드 같이 보안이 필요한 정보는 post방식으로. 아닐경우 get방식으로) --%>
 		<form action="/helloMVC/doLogin" method="post">
 			<table cellpadding="5">
 				<tr>

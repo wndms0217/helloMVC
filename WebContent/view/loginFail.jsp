@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Login Fail Page</title>
 </head>
 <body>
+	<%--     request에 저장되어 있는 bean객체 조회 하여 id 출력          --%>
 	<h1>Login Failed:${id} is not present.</h1>
 	<p>
 		<a href="/helloMVC/index.jsp">go to home page</a>

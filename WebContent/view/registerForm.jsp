@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Registration Page</title>
 </head>
 
 <style>
@@ -20,6 +20,7 @@ div.ex {
 <body>
 	<h1>Registration Form</h1>
 	<div class="ex">
+		<%--      doRegister page로 전송, 방식은 post      --%>
 		<form action="/helloMVC/doRegister" method="post">
 			<table cellpadding="5">
 				<tr>
