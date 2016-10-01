@@ -7,19 +7,20 @@ import model.Customer;
 
 public class CustomerService {
 
+	// doLogin, doRegister ¸ðµÎ¿¡¼­ Á¢±Ù ÇØ¾ß
 	// DB¿ªÈ°
 	// Map<key, value>
 	private Map<String, Customer> customers;
 
+	// ½Ì±ÛÅæ
+	private static final CustomerService instance = new CustomerService();
+
 	public CustomerService() {
 		customers = new HashMap<String, Customer>();
+	}
 
-		addCustomer(new Customer("id001", "Alice", "alice.hansung.ac.kr"));
-		addCustomer(new Customer("id002", "Bob", "bob.hansung.ac.kr"));
-		addCustomer(new Customer("id003", "Charlie", "charlie.hansung.ac.kr"));
-		addCustomer(new Customer("id004", "David", "david.hansung.ac.kr"));
-		addCustomer(new Customer("id005", "Trudy", "trudy.hansung.ac.kr"));
-
+	public static CustomerService getInstance() {
+		return instance;
 	}
 
 	public void addCustomer(Customer customer) {
@@ -27,10 +28,17 @@ public class CustomerService {
 	}
 
 	// Customer bean °´Ã¼ return
-	public Customer findCustomer(String id) {
-		if (id != null)
-			return (customers.get(id.toLowerCase()));
-		else
-			return null;
-	}
+	public Customer login(String id, String password) {
+			Customer cus = customers.get(id.toLowerCase());
+			if (cus != null){
+				if (password.equals(cus.getPassword())) {
+					return (cus);
+				} else
+					return null;
+			}
+			else return null;
+		}
+
+	
+
 }

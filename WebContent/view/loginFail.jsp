@@ -4,18 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>helloMVC Web Application</title>
+<title>Insert title here</title>
 </head>
 <body>
-
-	This is the home page for shopping
-
+	<h1>Login Failed:${id} is not present.</h1>
 	<p>
-		<a href="/helloMVC/home?action=login"> go to login page</a>
+		<a href="/helloMVC/index.jsp">go to home page</a>
 	</p>
-	<p>
-		<a href="/helloMVC/home?action=register"> go to register page</a>
-	</p>
-
 </body>
 </html>
